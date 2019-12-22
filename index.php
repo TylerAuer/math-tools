@@ -120,9 +120,9 @@
       Monte Carlo Simulations
     </h2>
     <p class="description">Run random events over and over and over...</p>
-    <p><a href="http://montecarlo.mathfireworks.com/one_die.html">One die</a></p>
-    <p><a href="http://montecarlo.mathfireworks.com/two_dice.html">Sum of 2 dice</a></p>
-    <p><a href="http://montecarlo.mathfireworks.com/shake_and_spill.html">Shake and Spill</a> (via <a href="https://twitter.com/mburnsmath">@MBurnsMath</a>)</p>
+    <p><a href="montecarlo/one_die.html">One die</a></p>
+    <p><a href="montecarlo/two_dice.html">Sum of 2 dice</a></p>
+    <p><a href="montecarlo/shake_and_spill.html">Shake and Spill</a> (via <a href="https://twitter.com/mburnsmath">@MBurnsMath</a>)</p>
 
     <!--The Future-->
     <h2>
