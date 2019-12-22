@@ -1,0 +1,72 @@
+/* Adobe Color Scheme
+
+fadedTeal: #8DC6AD
+darkTeal: #3C936D
+baseTeal: #CAF9CA
+brightPurple: #FA8CFA
+darkPurple #B68DC6
+
+https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=4&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.5522608079376328,0.776470588235294,0.6773165774847346,0.23707063548310886,0.5764705882352941,0.4263751440523868,0.7940368477051959,0.9764705882352941,0.792156862745098,0.9759849558662334,0.54968993621545,0.9794117647058823,0.7137254901960784,0.5529411764705883,0.7764705882352941&swatchOrder=0,1,2,3,4
+*/
+
+body {
+  margin-top: 20px;
+  font-family: monospace;
+  font-size: 1.1em;
+}
+
+#social {
+  margin: 20px 0px 0px 0px;
+}
+
+.form-check {
+  margin-bottom: 5px;
+}
+
+#holder {
+  max-width: 900px;
+}
+
+#grid-build-options {
+  max-width: 500px;
+}
+
+#mult-table-build-options {
+  max-width: 500px;
+}
+
+a {
+  color: deeppink;
+}
+
+a:hover {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bolder
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+.accent-text {
+  color: limegreen;
+  font-size: 1em;
+
+}
+
+.description {
+  font-family: monospace;
+  color: grey;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.lead {
+  color: dimgray;
+}
