@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html lang="en"> 
+
+    <head> 
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+
+<!--         Bootstrap CSS from CDN -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!--Tells the browser where to find the CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!--Accesses the free google fonts--->
+        <link href="https://fonts.googleapis.com/css?family=Teko:medium,regular|Open+Sans:350" rel="stylesheet">
+
+        <!--Link to the favicon - that little icon in the tab  -->
+        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+        <title>1 Die</title> 
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.js"></script>
+        
+        <style>
+            table, td, th {
+                font-size: 16px;
+                padding: 10px;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        <div id="description">
+            <a href="index.html"><p class="title">Rolling a Die</p></a>
+            <p class="description">Rolling a die is one of the most commonly used methods for generating random numbers. Are all of the results equally as likely? You may also want to explore the <a href"two_dice.html">rolling 2 dice simulator.</a></p><p>This site runs a <b>Monte Carlo Simulation</b> of rolling a six-sided die. While it may take you 10 seconds for each roll, most computers can simulate thousands of rolls every second. Scientists and mathematicians use this method to predict the outcome of sporting events, forecast the paths of hurricanes, and test new casino games.</p><p>This method takes advantage of the <b>Law of Large Numbers</b> which says that as you rerun a random event over-and-over-and-over, your results become more and more predictable.</p>
+        </div>
+        
+        <div id="buttons">
+            <button id="run1">1 Roll</button>
+            <button id="run10">10 Rolls</button>
+<!--            <button id="run100">100 </button>-->
+<!--            <button id="run1000">Run 1000</button>-->
+            <button id="runForever">Infinite Rolls</button>
+            <button id="reset">Reset</button>
+        </div>
+    
+        <div id="lastResult">
+            <div class="roundedBox">
+                <div id="die1" class="die">?</div>
+            </div>
+        </div>
+        
+        <div id="results-table">
+            <table width="auto">
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+                <tr>
+                    <td><p class="table-col1">Sum</p></td>
+                    <td id="count1">190</td>
+                    <td id="count2">190</td>
+                    <td id="count3">190</td>
+                    <td id="count4">190</td>
+                    <td id="count5">190</td>
+                    <td id="count6">190</td>
+                </tr>
+                <tr>
+                    <td><p class="table-col1">Percent</p></td>
+                    <td id="percent1">190</td>
+                    <td id="percent2">190</td>
+                    <td id="percent3">190</td>
+                    <td id="percent4">190</td>
+                    <td id="percent5">190</td>
+                    <td id="percent6">190</td>
+                </tr>
+            </table>
+        </div>
+            
+        <p id="iterCount">If you are reading this, it means your browser does not support JavaScript -- the programming language that makes this page work. I suggest using <a href="https://www.google.com/chrome/browser/desktop/">Google Chrome</a> instead!</p>
+        
+<!--        Graph stuff-->
+        <canvas id="myChart"></canvas>
+        
+        
+        
+         <!--This div holds the footer 	-->
+        <p class='endmatter'>This page was created by <a href='mailto:&#84;&#121;&#108;&#101;&#114;&#64;&#109;&#97;&#116;&#104;&#102;&#105;&#114;&#101;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;'>Tyler Auer</a> of <a href='http://mathfireworks.com'>Math Fireworks</a>. It may be used freely for any educational purposes. When possible, please let Tyler know you are using this page. It encourages him to make more! <br><br>Discover more Monte Carlo simulations at <a href="index.html">montecarlo.mathfireworks.com</a>. <br><br>Chart powered by <a href="http://www.chartjs.org/">Chart.js</a> JavaScript library.
+
+<!--    Gets JQuery from Google CDN   -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    
+        <script src="one_die.js"></script>
+        
+        
+    </body>
+</html>
