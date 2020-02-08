@@ -1,6 +1,8 @@
 # Mathematical Playgrounds
 
-**_A growing collection of mathematical models and explorations for budding mathematicians._**
+**_A growing collection of mathematical models and explorations for budding mathematicians._** I have learned a lot since I first built this. 
+
+After completing a few other projects, I am returning to this project. I plan to rebuild and extend some of the current features as well as add new ones.
 
 > [See it live!](http://play.mathfireworks.com/)
 
@@ -14,6 +16,7 @@
   - Multiplication Chart
     - Set limits on columns and rows
     - Add faint left and right borders to cells so big numbers can be read separately
+    - Change font size as numbers get larger
   - Monte Carlo Activiites
     - Vertical axis should be percents not counts
     - Edit footer
