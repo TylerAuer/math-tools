@@ -1,9 +1,44 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+// Styles from this file are exported to all other scss files
 
-body {
-  background: $backgroundColor;
-  color: $bodyColor;
+// imports google fonts: Bungee and Open Sans
+@import url("https://fonts.googleapis.com/css?family=Bungee|Open+Sans&display=swap");
+
+$bodyFont: "Open Sans", sans-serif;
+$hFont: "Bungee", cursive;
+
+/* Color Theme Swatches in RGBA */
+$theme-yellow: rgb(255, 230, 0);
+$theme-green: rgb(92, 221, 41);
+$theme-pink: rgba(255, 0, 141, 1);
+$theme-blue: rgba(20, 186, 204, 1);
+$theme-red: rgb(255, 116, 81);
+
+//////////////////////////////////
+// Universal Settings
+//////////////////////////////////
+
+html {
   font-family: $bodyFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $hFont;
+}
+
+//////////////////////////////////
+// Header
+//////////////////////////////////
+
+#header-title {
+  color: $theme-red;
+  transition-duration: 500ms;
+}
+
+#header-subtitle {
+  color: black;
 }

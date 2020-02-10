@@ -1,2 +1,5 @@
 url: "play.mathfireworks.com" # the base hostname & protocol for your site, e.g. http://example.com
 title: "Mathematical Playgrounds"
+
+sass:
+  sass_dir: _sass

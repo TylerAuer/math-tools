@@ -1,8 +1,5 @@
----
-layout: index
-title: "Home"
----
-<div class="container">
+I"«<div id="holder" class="container">
+
 
     <!--100s Grid -->
 
@@ -10,33 +7,33 @@ title: "Home"
       100s Chart
     </h2>
     <p class="description">Explore place value and skip counting</p>
-    <p><a href="/100_chart/grid.php">Simple</a> (<span class="accent-text">toggle colors & skip count</span>)</p>
+    <p><a href="/100_chart/grid.php">Simple</a> (<span class="accent-text">toggle colors &amp; skip count</span>)</p>
     <p><b>Build Your Own:</b></p>
     <div class="container">
       <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="eratosthenes">
+        <input type="checkbox" class="custom-control-input" id="eratosthenes" />
         <label class="custom-control-label" for="eratosthenes">Sieve of Eratosthenes</label>
       </div>
 
       <div id="grid-build-options" class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="">Start number</span>
+          <span class="input-group-text">Start number</span>
         </div>
-        <input id="grid-startNumber" type="number" min="1" max="1000" class="form-control" value="1">
+        <input id="grid-startNumber" type="number" min="1" max="1000" class="form-control" value="1" />
       </div>
 
       <div id="grid-build-options" class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="">End number</span>
+          <span class="input-group-text">End number</span>
         </div>
-        <input id="grid-endNumber" type="number" min="1" max="2000" class="form-control" value="100">
+        <input id="grid-endNumber" type="number" min="1" max="2000" class="form-control" value="100" />
       </div>
 
       <div id="grid-build-options" class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="">Columns</span>
+          <span class="input-group-text">Columns</span>
         </div>
-        <input id="grid-columns" type="number" min="1" max="15" class="form-control" value="10">
+        <input id="grid-columns" type="number" min="1" max="15" class="form-control" value="10" />
 
         <div class="input-group-append">
           <button id="btn-build-grid" class="btn btn-outline-secondary" type="button">Build It</button>
@@ -61,15 +58,15 @@ title: "Home"
       Multiplication Table
     </h2>
     <p class="description">Find patterns in a customizable times table</p>
-    <p><a href="/mult_table/mult_table.php">Simple</a> (<span class="accent-text">10x10 & toggle colors</span>)</p>
+    <p><a href="/mult_table/mult_table.php">Simple</a> (<span class="accent-text">10x10 &amp; toggle colors</span>)</p>
     <p><b>Build Your Own:</b></p>
     <div class="container">
       <div id="mult-table-build-options" class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="">Columns and Rows</span>
+          <span class="input-group-text">Columns and Rows</span>
         </div>
-        <input id="mult-table-columns" type="number" min="1" max="15" class="form-control" value="10">
-        <input id="mult-table-rows" type="number" min="1" max="200" class="form-control" value="10">
+        <input id="mult-table-columns" type="number" min="1" max="15" class="form-control" value="10" />
+        <input id="mult-table-rows" type="number" min="1" max="200" class="form-control" value="10" />
         <div class="input-group-append">
           <button id="btn-build-mult-table" class="btn btn-outline-secondary" type="button">Build It</button>
         </div>
@@ -109,7 +106,7 @@ title: "Home"
     <p>Blackjack (<span class="accent-text">Monte Carlo</span>)</p>
     <p>Roulette (<span class="accent-text">Monte Carlo</span>)</p>
     <p>Broken calculators (<span class="accent-text">New</span>)</p>
-    <p><a href="https://www.google.com/search?q=subitizing+cards&tbm=isch&source=iu&ictx=1&fir=1E4oUwfIzjQ04M%253A%252CvvcKvruS3fjTIM%252C_&usg=__N_iX8ooaSwIX-t6WAlQXkM3G5l4%3D&sa=X&ved=0ahUKEwj3-4DQqcfbAhUmiVQKHa3UA3UQ9QEIUDAH#imgrc=1E4oUwfIzjQ04M:">Dot Pattern Generator for Subitizing</a> (<span class="accent-text">New</span>)</p>
+    <p><a href="https://www.google.com/search?q=subitizing+cards&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=1E4oUwfIzjQ04M%253A%252CvvcKvruS3fjTIM%252C_&amp;usg=__N_iX8ooaSwIX-t6WAlQXkM3G5l4%3D&amp;sa=X&amp;ved=0ahUKEwj3-4DQqcfbAhUmiVQKHa3UA3UQ9QEIUDAH#imgrc=1E4oUwfIzjQ04M:">Dot Pattern Generator for Subitizing</a> (<span class="accent-text">New</span>)</p>
     <p><a href="https://en.wikipedia.org/wiki/Caesar_cipher">Visual Caeser Cipher</a> (<span class="accent-text">New</span>)</p>
     <p><a href="https://en.wikipedia.org/wiki/Ulam_spiral">Ulam's Spiral</a> (<span class="accent-text">New</span>)</p>
     <p><a href="https://www.illustrativemathematics.org/content-standards/tasks/938">Interactive Locker Problem</a> (<span class="accent-text">New</span>)</p>
@@ -169,4 +166,4 @@ title: "Home"
     <p>100s grid posted and <a href="https://twitter.com/MathFireworks/status/975936024953069569">shared</a> for feedback</p>
   </div>
 
-
+:ET

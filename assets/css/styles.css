@@ -1,16 +1,5 @@
-/* Adobe Color Scheme
-
-fadedTeal: #8DC6AD
-darkTeal: #3C936D
-baseTeal: #CAF9CA
-brightPurple: #FA8CFA
-darkPurple #B68DC6
-
-https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=4&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.5522608079376328,0.776470588235294,0.6773165774847346,0.23707063548310886,0.5764705882352941,0.4263751440523868,0.7940368477051959,0.9764705882352941,0.792156862745098,0.9759849558662334,0.54968993621545,0.9794117647058823,0.7137254901960784,0.5529411764705883,0.7764705882352941&swatchOrder=0,1,2,3,4
-*/
-
 a {
-  color: #FA8CFA;
+  color: #fa8cfa;
 }
 
 .title-text {
@@ -31,7 +20,7 @@ a {
 .table td,
 .table th {
   text-align: center;
-  font-size: .8em;
+  font-size: 0.8em;
   padding: 12px 0px;
 }
 
@@ -48,7 +37,7 @@ th:hover {
 
 td:hover {
   background-color: #caf9ca;
-  color: #B68DC6;
+  color: #b68dc6;
 }
 
 #btn-area {
@@ -59,7 +48,6 @@ td:hover {
   margin: 2px;
 }
 
-
 /*
 Highlight options
 */
@@ -69,7 +57,7 @@ Highlight options
 }
 
 .color-prime {
-  background: #FA8CFA;
+  background: #fa8cfa;
   color: white;
 }
 

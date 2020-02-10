@@ -1,0 +1,39 @@
+<header>
+    <div class="row">
+        <div id="header-title" class="col-12 text-center">
+            <h1 class="display-4">
+                Mathematical Playgrounds
+            </h1>
+        </div>
+    </div>
+
+
+    <div id="nav-links" class="mb-3">
+        <nav class="nav d-flex justify-content-center">
+            {% for item in site.data.navigation %}
+            <a href="{{ item.link }}" class="px-2{% if page.url == item.link %} nav-current-page{% endif %}">
+                {{ item.name }}
+            </a>
+            {% endfor %}
+        </nav>
+    </div>
+</header>
+<script>
+    const colorCycle = [
+        "rgb(255, 230, 0)",
+        "rgb(92, 221, 41)",
+        "rgba(255, 0, 141, 1)",
+        "rgba(20, 186, 204, 1)",
+        "rgb(255, 116, 81)",
+    ];
+
+    const title = document.getElementById("header-title");
+    let currentColor = 0;
+    function changeColor() {
+        currentColor = (currentColor + 1) % colorCycle.length;
+        title.style.color = colorCycle[currentColor]
+    }
+    setInterval(changeColor, 5000);
+
+
+</script>

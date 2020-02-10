@@ -1,8 +1,75 @@
----
-layout: index
-title: "Home"
----
-<div class="container">
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116279760-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116279760-1');
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Home - Mathematical Playgrounds</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/assets/css/index.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="row">
+        <div id="header-title" class="col-12 text-center">
+            <h1 class="display-4">
+                Mathematical Playgrounds
+            </h1>
+        </div>
+    </div>
+
+
+    <div id="nav-links" class="mb-3">
+        <nav class="nav d-flex justify-content-center">
+            
+            <a href="/" class="px-2 nav-current-page">
+                Home
+            </a>
+            
+            <a href="/about.md" class="px-2">
+                About
+            </a>
+            
+        </nav>
+    </div>
+</header>
+<script>
+    const colorCycle = [
+        "rgb(255, 230, 0)",
+        "rgb(92, 221, 41)",
+        "rgba(255, 0, 141, 1)",
+        "rgba(20, 186, 204, 1)",
+        "rgb(255, 116, 81)",
+    ];
+
+    const title = document.getElementById("header-title");
+    let currentColor = 0;
+    function changeColor() {
+        currentColor = (currentColor + 1) % colorCycle.length;
+        title.style.color = colorCycle[currentColor]
+    }
+    setInterval(changeColor, 5000);
+
+
+</script>
+  <div id="main">
+    <div class="container">
 
     <!--100s Grid -->
 
@@ -10,33 +77,33 @@ title: "Home"
       100s Chart
     </h2>
     <p class="description">Explore place value and skip counting</p>
-    <p><a href="/100_chart/grid.php">Simple</a> (<span class="accent-text">toggle colors & skip count</span>)</p>
+    <p><a href="/100_chart/grid.php">Simple</a> (<span class="accent-text">toggle colors &amp; skip count</span>)</p>
     <p><b>Build Your Own:</b></p>
     <div class="container">
       <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="eratosthenes">
+        <input type="checkbox" class="custom-control-input" id="eratosthenes" />
         <label class="custom-control-label" for="eratosthenes">Sieve of Eratosthenes</label>
       </div>
 
       <div id="grid-build-options" class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="">Start number</span>
+          <span class="input-group-text">Start number</span>
         </div>
-        <input id="grid-startNumber" type="number" min="1" max="1000" class="form-control" value="1">
+        <input id="grid-startNumber" type="number" min="1" max="1000" class="form-control" value="1" />
       </div>
 
       <div id="grid-build-options" class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="">End number</span>
+          <span class="input-group-text">End number</span>
         </div>
-        <input id="grid-endNumber" type="number" min="1" max="2000" class="form-control" value="100">
+        <input id="grid-endNumber" type="number" min="1" max="2000" class="form-control" value="100" />
       </div>
 
       <div id="grid-build-options" class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="">Columns</span>
+          <span class="input-group-text">Columns</span>
         </div>
-        <input id="grid-columns" type="number" min="1" max="15" class="form-control" value="10">
+        <input id="grid-columns" type="number" min="1" max="15" class="form-control" value="10" />
 
         <div class="input-group-append">
           <button id="btn-build-grid" class="btn btn-outline-secondary" type="button">Build It</button>
@@ -61,15 +128,15 @@ title: "Home"
       Multiplication Table
     </h2>
     <p class="description">Find patterns in a customizable times table</p>
-    <p><a href="/mult_table/mult_table.php">Simple</a> (<span class="accent-text">10x10 & toggle colors</span>)</p>
+    <p><a href="/mult_table/mult_table.php">Simple</a> (<span class="accent-text">10x10 &amp; toggle colors</span>)</p>
     <p><b>Build Your Own:</b></p>
     <div class="container">
       <div id="mult-table-build-options" class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="">Columns and Rows</span>
+          <span class="input-group-text">Columns and Rows</span>
         </div>
-        <input id="mult-table-columns" type="number" min="1" max="15" class="form-control" value="10">
-        <input id="mult-table-rows" type="number" min="1" max="200" class="form-control" value="10">
+        <input id="mult-table-columns" type="number" min="1" max="15" class="form-control" value="10" />
+        <input id="mult-table-rows" type="number" min="1" max="200" class="form-control" value="10" />
         <div class="input-group-append">
           <button id="btn-build-mult-table" class="btn btn-outline-secondary" type="button">Build It</button>
         </div>
@@ -109,7 +176,7 @@ title: "Home"
     <p>Blackjack (<span class="accent-text">Monte Carlo</span>)</p>
     <p>Roulette (<span class="accent-text">Monte Carlo</span>)</p>
     <p>Broken calculators (<span class="accent-text">New</span>)</p>
-    <p><a href="https://www.google.com/search?q=subitizing+cards&tbm=isch&source=iu&ictx=1&fir=1E4oUwfIzjQ04M%253A%252CvvcKvruS3fjTIM%252C_&usg=__N_iX8ooaSwIX-t6WAlQXkM3G5l4%3D&sa=X&ved=0ahUKEwj3-4DQqcfbAhUmiVQKHa3UA3UQ9QEIUDAH#imgrc=1E4oUwfIzjQ04M:">Dot Pattern Generator for Subitizing</a> (<span class="accent-text">New</span>)</p>
+    <p><a href="https://www.google.com/search?q=subitizing+cards&amp;tbm=isch&amp;source=iu&amp;ictx=1&amp;fir=1E4oUwfIzjQ04M%253A%252CvvcKvruS3fjTIM%252C_&amp;usg=__N_iX8ooaSwIX-t6WAlQXkM3G5l4%3D&amp;sa=X&amp;ved=0ahUKEwj3-4DQqcfbAhUmiVQKHa3UA3UQ9QEIUDAH#imgrc=1E4oUwfIzjQ04M:">Dot Pattern Generator for Subitizing</a> (<span class="accent-text">New</span>)</p>
     <p><a href="https://en.wikipedia.org/wiki/Caesar_cipher">Visual Caeser Cipher</a> (<span class="accent-text">New</span>)</p>
     <p><a href="https://en.wikipedia.org/wiki/Ulam_spiral">Ulam's Spiral</a> (<span class="accent-text">New</span>)</p>
     <p><a href="https://www.illustrativemathematics.org/content-standards/tasks/938">Interactive Locker Problem</a> (<span class="accent-text">New</span>)</p>
@@ -170,3 +237,23 @@ title: "Home"
   </div>
 
 
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="/assets/js/index.js"></script>
+
+  <!--Twitter Scripts-->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+
+</html>
