@@ -4,6 +4,8 @@ html { font-family: "Open Sans", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Bungee", cursive; }
 
+a { color: #14bacc; }
+
 #header-title { color: #ff7451; transition-duration: 500ms; }
 
 #header-subtitle { color: black; }
@@ -19,18 +21,6 @@ body { margin-top: 20px; font-size: 1.1em; }
 #grid-build-options { max-width: 500px; }
 
 #mult-table-build-options { max-width: 500px; }
-
-a { color: deeppink; }
-
-a:hover { text-decoration: none; color: darkblue; font-weight: bolder; }
-
-h2 { margin-top: 40px; margin-bottom: 0px; }
-
-p { margin-bottom: 5px; }
-
-.accent-text { color: limegreen; font-size: 1em; }
-
-.description { font-family: monospace; color: grey; margin-top: 0px; margin-bottom: 10px; }
 
 .lead { color: dimgray; }
 

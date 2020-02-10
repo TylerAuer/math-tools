@@ -353,5 +353,8 @@ MigrationBackup/
 .ionide/
 
 #Jekyll
-_site
-.jekyll-cache
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+_site/index.html
