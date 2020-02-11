@@ -41,6 +41,10 @@ a {
 #header-title {
   color: $theme-red;
   transition-duration: 500ms;
+
+  h1 {
+    margin-bottom: 0px;
+  }
 }
 
 #header-subtitle {
