@@ -20,3 +20,20 @@ After completing a few other projects, I am returning to this project. I plan to
   - Monte Carlo Activiites
     - Vertical axis should be percents not counts
     - Edit footer
+
+## Future Things to Build
+
+- 100s grid puzzles
+  - Blank squares to fill based on a give
+  - Sums of squares in a pattern
+- Monte Carlo
+  - Sum of 3 Dice
+  - Poker Hands
+  - Blackjack
+  - Roulette
+- Big Ideas
+  - Broken Calculators
+  - Random subitizing card generator
+  - Ciphers and Codes
+  - Visual Collatz Conjecture
+  - XKCD Fruit Rating
