@@ -107,20 +107,15 @@ title: "Home"
           Run random events over and over and over and over and over and over and over and over and over and over and
           over and over and over and over and over and over and over and over...
         </p>
-      </div>
-
-      <ul class="list-group list-group-flush">
-
+        <h5>Start with a favorite:</h5>
         <ul>
-          <h5>Start with a favorite:</h5>
           <li><a href="montecarlo/one_die.html">One die</a></li>
           <li><a href="montecarlo/two_dice.html">Sum of 2 dice</a></li>
         </ul>
-        <li class="list-group-item">
-          <h5>Check out the collection:</h5>
-          <a class="btn btn-success" href="/montecarlo/index.html" role="button">See the whole list</a>
-        </li>
-      </ul>
+        <h5>Check out the collection:</h5>
+        <a class="btn btn-success" href="/montecarlo/index.html" role="button">The whole enchilada</a>
+      </div>
     </div>
   </div>
+
 </div>
