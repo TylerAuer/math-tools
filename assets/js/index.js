@@ -1,5 +1,5 @@
-$("#btn-build-mult-table").click(function () {
-  url = "/mult_table/mult_table.php?" // base url
+$("#btn-build-mult-table").click(function() {
+  url = "/mult_table/mult_table.html?"; // base url
   //Gets user input
   rows = $("#mult-table-rows").val();
   columns = $("#mult-table-columns").val();
@@ -9,16 +9,24 @@ $("#btn-build-mult-table").click(function () {
   window.location.href = url;
 });
 
-$("#btn-build-grid").click(function () {
-  url = "/100_chart/grid.php?" // base url
+$("#btn-build-grid").click(function() {
+  url = "/100_chart/grid.html?"; // base url
   //Gets user input
   startNumber = $("#grid-startNumber").val();
   endNumber = $("#grid-endNumber").val();
-  eratosthenes = $('input[id="eratosthenes"]').is(':checked')
+  eratosthenes = $('input[id="eratosthenes"]').is(":checked");
   columns = $("#grid-columns").val();
 
   //Builds URL
-  url += "startNumber=" + startNumber + "&endNumber=" + endNumber + "&eratosthenes=" + eratosthenes + "&columns=" + columns;
+  url +=
+    "startNumber=" +
+    startNumber +
+    "&endNumber=" +
+    endNumber +
+    "&eratosthenes=" +
+    eratosthenes +
+    "&columns=" +
+    columns;
   //Sends user to URL
   window.location.href = url;
 });

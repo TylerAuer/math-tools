@@ -3,31 +3,7 @@
 
 @import "main";
 
-body {
-  margin-top: 20px;
-  font-size: 1.1em;
-}
-
-#social {
-  margin: 20px 0px 0px 0px;
-}
-
-.form-check {
-  margin-bottom: 5px;
-}
-
-#holder {
-  max-width: 900px;
-}
-
-#grid-build-options {
-  max-width: 500px;
-}
-
-#mult-table-build-options {
-  max-width: 500px;
-}
-
-.description {
-  color: dimgray;
+.btn.btn-success {
+  color: white !important;
+  white-space: normal;
 }
