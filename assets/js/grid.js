@@ -1,67 +1,52 @@
-//Checks if there is a startNumber GET variable in URL
-var startNumber;
-if (getUrlVars()["startNumber"] != undefined) {
-  startNumber = Number(getUrlVars()["startNumber"]);
-} else {
-  startNumber = 1;
+// default parameters
+const gridParams = {
+  startNumber: 1,
+  endNumber: 100,
+  columns: 10,
+}
+
+// gets user parameters from URL
+const getUserParams = () => {
+  // gets URL data from after ? in URL in browser window
+  const url = window.location.href;
+  const urlData = url.slice(url.indexOf("?") + 1);
+  // splits into variables
+  const dataArray = urlData.split("&");
+  const urlParams = {};
+  dataArray.forEach(i => {
+    const dataPair = i.split("=");
+    urlParams[dataPair[0]] = parseInt(dataPair[1]);
+  });
+  return urlParams;
 };
 
-//Checks if there is a endNumber GET variable in URL
-var endNumber;
-if (getUrlVars()["endNumber"] != undefined) {
-  endNumber = Number(getUrlVars()["endNumber"]);
-} else {
-  endNumber = 100;
-};
+const userParams = getUserParams()
 
-//Checks if there is a columns GET variable in URL
-var columns;
-if (getUrlVars()["columns"] != undefined) {
-  columns = Number(getUrlVars()["columns"]);
-} else {
-  columns = 10;
-};
-
-//Checks if there is a eratosthenes GET variable in URL
-var eratosthenes;
-if (getUrlVars()["eratosthenes"] != undefined) {
-  eratosthenes = getUrlVars()["eratosthenes"];
-} else {
-  eratosthenes = false;
-};
-
-// Read a page's GET URL variables and return them as an associative array.
-// Example ?columns=10&rows=12
-// Use this to get a variable--> getUrlVars()["columns"]
-function getUrlVars() {
-  var vars = [],
-    hash;
-  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-  for (var i = 0; i < hashes.length; i++) {
-    hash = hashes[i].split('=');
-    vars.push(hash[0]);
-    vars[hash[0]] = hash[1];
-  }
-  return vars;
-};
+// replaces default params with user params if provided
+for (const prop in userParams) {
+  gridParams[prop] = userParams[prop];
+}
 
 // Builds the table
-function buildTable(startNumber = 1, endNumber = 100, columns = 10) {
+function buildTable(startNumber, endNumber, columns) {
+  const skipCountBtnBank = document.getElementById("skip-count-btn-bank")
+  const functionBtnBank = document.getElementById("function-btn-bank")
+
   // Generates skip count buttons
-  for (i = 1; i <= columns; i++) {
-    $("#skip-count-btn-bank").append('<button id="count-' + i + '-btn" type="button" class="btn btn-primary" onclick="skipCounter(' + i + ');">' + i + '</button>');
+  for (let i = 1; i <= columns; i++) {
+    skipCountBtnBank.innerHTML +=
+      '<button id="count-' + i +
+      '-btn" type="button" class="btn btn-secondary m-1" onclick="skipCounter(' +
+      i + ');">' + i + '</button>';
   };
 
-  // Generates other buttons
   //Reset btn
-  $('#function-btn-bank').append('<button id="reset-btn" type="button" class="btn btn-primary">Reset</button>');
-  //Eratosthenes
-  if (eratosthenes == 'true') {
-    $('#function-btn-bank').append('<button id="eratosthenes-btn" type="button" class="btn btn-primary";">Eratosthenes</button>')
-  };
+  functionBtnBank.innerHTML +=
+    '<button id="reset-btn" type="button" class="btn btn-danger btn-lg m-2">Reset</button>';
 
   // Generates table of numbers
   counter = 1;
+
   $("#grid").append("<tr>");
   for (i = startNumber; i < 1 + endNumber; i++) {
     $("#grid").append("<td class='number' id='" + i + "'>" + i + "</td>");
@@ -76,23 +61,8 @@ function buildTable(startNumber = 1, endNumber = 100, columns = 10) {
     }
   }
 };
-//  for (i = startNumber; i < 1 + endNumber; i++) {
-//    if (i % columns == 1) {
-//      $("#grid").append("<tr>");
-//    };
-//    // Adds cell for number
-//    $("#grid").append("<td class='number' id='" + i + "'>" + i + "</td>");
-//    // Adds </tr> after multiple of 10
-//    if (i % columns == 0) {
-//      $("#grid").append("</tr>");
-//    };
-//  };
-//  // Adds the closing </tr> tag
-//  $("#grid").append("</tr>");
-//};
 
-buildTable(startNumber, endNumber, columns);
-
+buildTable(gridParams.startNumber, gridParams.endNumber, gridParams.columns);
 
 // Skip counts and colors tiles based on multiple
 function skipCounter(multiple, endNumber = 100) {
@@ -139,8 +109,3 @@ function runEratosthenes(endNumber = 100) {
     }
   }
 }
-
-// Eratosthenes Btn
-$("#eratosthenes-btn").click(function () {
-  runEratosthenes(endNumber);
-});

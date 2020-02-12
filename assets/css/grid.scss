@@ -3,90 +3,127 @@
 
 @import "main";
 
-.title-text {
-  font-size: 3.5em;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  line-height: 1;
-}
+/* Color Theme Swatches in RGBA 
+$theme-yellow: rgb(255, 230, 0);
+$theme-green: rgb(92, 221, 41);
+$theme-pink: rgba(255, 0, 141, 1);
+$theme-blue: rgba(20, 186, 204, 1);
+$theme-red: rgb(255, 116, 81);
+*/
 
-.subtitle-text {
-  font-size: 1.2em;
-  color: dimgray;
-  font-style: italic;
-  padding-bottom: 0px;
-  margin: 0px;
-}
+/////////////////////////////////////
+/////////////////////////////////////
+// Table Styling
+/////////////////////////////////////
+/////////////////////////////////////
 
-.table td,
-.table th {
+.number {
   text-align: center;
-  font-size: 0.8em;
-  padding: 12px 0px;
 }
 
-th {
-  background-color: black;
-  color: hotpink;
-  font-weight: normal;
+/////////////////////////////////////
+/////////////////////////////////////
+// Highlight options
+/////////////////////////////////////
+/////////////////////////////////////
+
+.color-main {
+  background: $theme-green;
 }
 
-th:hover {
-  color: black;
-  background-color: hotpink;
+.color-prime {
+  background: $theme-red;
+  color: white;
 }
-
 td:hover {
   background-color: #caf9ca;
   color: #b68dc6;
 }
 
-#btn-area {
-  margin: 10px auto;
-}
+// .title-text {
+//   font-size: 3.5em;
+//   margin-bottom: 0px;
+//   padding-bottom: 0px;
+//   line-height: 1;
+// }
 
-.btn {
-  margin: 2px;
-}
+// .subtitle-text {
+//   font-size: 1.2em;
+//   color: dimgray;
+//   font-style: italic;
+//   padding-bottom: 0px;
+//   margin: 0px;
+// }
 
-/*
-Highlight options
-*/
+// .table td,
+// .table th {
+//   text-align: center;
+//   font-size: 0.8em;
+//   padding: 12px 0px;
+// }
 
-.color-main {
-  background: lightgreen;
-}
+// th {
+//   background-color: black;
+//   color: hotpink;
+//   font-weight: normal;
+// }
 
-.color-prime {
-  background: #fa8cfa;
-  color: white;
-}
+// th:hover {
+//   color: black;
+//   background-color: hotpink;
+// }
 
-/*
-Smaller Screen Styles
-*/
+// td:hover {
+//   background-color: #caf9ca;
+//   color: #b68dc6;
+// }
 
-@media (min-width: 768px) {
-  /* Smaller table text */
-  .table td,
-  .table th {
-    font-size: 1.8em;
-  }
+// #btn-area {
+//   margin: 10px auto;
+// }
 
-  .title-text {
-    font-size: 4em;
-  }
-}
+// .btn {
+//   margin: 2px;
+// }
 
-@media (min-width: 992px) {
-  /* Smaller table text */
-  .table td,
-  .table th {
-    font-size: 1.8em;
-  }
+// /*
+// Highlight options
+// */
 
-  .title-text {
-    font-size: 6em;
-    margin-bottom: 5px;
-  }
-}
+// .color-main {
+//   background: lightgreen;
+// }
+
+// .color-prime {
+//   background: #fa8cfa;
+//   color: white;
+// }
+
+// /*
+// Smaller Screen Styles
+// */
+
+// @media (min-width: 768px) {
+//   /* Smaller table text */
+//   .table td,
+//   .table th {
+//     font-size: 1.8em;
+//   }
+
+//   .title-text {
+//     font-size: 4em;
+//   }
+// }
+
+// @media (min-width: 992px) {
+//   /* Smaller table text */
+//   .table td,
+//   .table th {
+//     font-size: 1.8em;
+//   }
+
+//   .title-text {
+//     font-size: 6em;
+//     margin-bottom: 5px;
+//   }
+// }

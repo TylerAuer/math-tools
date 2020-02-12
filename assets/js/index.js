@@ -14,7 +14,6 @@ $("#btn-build-grid").click(function() {
   //Gets user input
   startNumber = $("#grid-startNumber").val();
   endNumber = $("#grid-endNumber").val();
-  eratosthenes = $('input[id="eratosthenes"]').is(":checked");
   columns = $("#grid-columns").val();
 
   //Builds URL
@@ -23,8 +22,6 @@ $("#btn-build-grid").click(function() {
     startNumber +
     "&endNumber=" +
     endNumber +
-    "&eratosthenes=" +
-    eratosthenes +
     "&columns=" +
     columns;
   //Sends user to URL
