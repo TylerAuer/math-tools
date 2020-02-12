@@ -5,8 +5,7 @@
 
   {% include head.html %}
 
-  <!-- Custom CSS for the page; link in front matter -->
-  <link rel="stylesheet" href="{{ page.customCSS }}">
+  <link rel="stylesheet" href="{{ "/assets/css/100-grid.css" | relative_url }}">
 
 </head>
 
@@ -19,8 +18,7 @@
   </div>
 
   {% include body-end.html %}
-  <!-- Custom JS for the page; link in front matter -->
-  <script src="{{ page.customJS }}"></script>
+
 
 </body>
 

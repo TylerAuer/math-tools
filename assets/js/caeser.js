@@ -10,9 +10,7 @@ function genCharArray(charA, charZ) {
 }
 
 // Assigns generated alphabet array to variable alphabet
-var alphabet = genCharArray('a', 'z');
+var alphabet = genCharArray("a", "z");
 
 // Builds alphabet
-function buildTable(array) {
-
-}
+function buildTable(array) {}
