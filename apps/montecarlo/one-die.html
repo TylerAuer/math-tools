@@ -1,0 +1,80 @@
+---
+layout: montecarlo
+title: "One Die - Monte Carlo"
+customJS: "/apps/montecarlo/one-die.js"
+customCSS: "/assets/css/montecarlo.css"
+---
+
+<div class="container">
+    <div id="description">
+
+        <h2>Rolling a Die</h2>
+
+        <p>
+            Rolling a die is one of the most commonly used methods for generating random numbers. Are all
+            of the results equally as likely?
+        </p>
+        <p>
+            This site runs a <b>Monte Carlo Simulation</b> of rolling a six-sided die. While it may take you 10 seconds
+            for
+            each roll, most computers can simulate thousands of rolls every second. Scientists and mathematicians use
+            this
+            method to predict the outcome of sporting events, forecast the paths of hurricanes, and test new casino
+            games.
+        </p>
+        <p>This method takes advantage of the <b>Law of Large Numbers</b> which says that as you rerun a random event
+            over-and-over-and-over, your results become more and more predictable.</p>
+    </div>
+
+    <div id="simulation">
+        <div id="lastResult" class="text-center">
+            <div id="die1" class="die">?</div>
+        </div>
+
+        <!-- iteration counter -->
+        <h2 id="iterCount" class="text-center">Iteration Count: 0</h2>
+
+        {% include montecarlo-btns.html %}
+
+        <div id="results-table-sm">
+            <table class='table table-sm'>
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+                <tr>
+                    <td class="table-col1">
+                        Sum
+                    </td>
+                    <td id="count1">0</td>
+                    <td id="count2">0</td>
+                    <td id="count3">0</td>
+                    <td id="count4">0</td>
+                    <td id="count5">0</td>
+                    <td id="count6">0</td>
+                </tr>
+                <tr>
+                    <td class="table-col1">
+                        Percent
+                    </td>
+                    <td id="percent1">0</td>
+                    <td id="percent2">0</td>
+                    <td id="percent3">0</td>
+                    <td id="percent4">0</td>
+                    <td id="percent5">0</td>
+                    <td id="percent6">0</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!--        Graph stuff-->
+        <canvas id="myChart"></canvas>
+
+    </div>
+</div>

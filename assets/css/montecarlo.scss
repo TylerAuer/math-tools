@@ -1,0 +1,120 @@
+---
+---
+
+@import "main";
+
+///////////////////////////////////////////////////
+// Settings for all Monte Carlo Sims
+///////////////////////////////////////////////////
+
+#run1,
+#run10,
+#runForever,
+#stop {
+  color: white;
+  background-color: $theme-blue;
+  border: none;
+}
+
+#run1:hover,
+#run10:hover,
+#runForever:hover,
+#stop {
+  background-color: $theme-pink;
+}
+
+#reset {
+  color: white;
+  background-color: $theme-red;
+  border: none;
+}
+
+#reset:hover {
+  background-color: red;
+}
+
+#results-table-sm {
+  margin: 10px auto;
+  font-size: 20px;
+  max-width: 800px;
+}
+
+#results-table-lg {
+  margin: 10px auto;
+  font-size: 20px;
+}
+
+table,
+td,
+th {
+  border-bottom: 1px solid $theme-blue;
+  text-align: center;
+}
+
+.table th,
+table .table-col1 {
+  font-family: $hFont;
+  border-top: none;
+  color: $theme-pink;
+}
+
+#lastResult {
+  margin: 30px auto;
+}
+
+#iterCount {
+  color: $theme-pink;
+}
+
+#myChart {
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto;
+  height: 400px;
+}
+
+///////////////////////////////////////////////////
+// CSS for dice simulations
+///////////////////////////////////////////////////
+
+.die {
+  border-radius: 10px;
+  border-color: $theme-pink;
+  color: $theme-pink;
+  border-style: solid;
+  border-width: 5px;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  display: inline-block;
+  margin: 0px 2px;
+  background-color: white;
+  font-size: 50px;
+  font-family: $hFont;
+}
+
+///////////////////////////////////////////////////
+// CSS for Two Color Tiles
+///////////////////////////////////////////////////
+
+.big,
+.black,
+.lil {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  margin: 0px 2px;
+  background-color: #9d2235;
+}
+
+.lil {
+  border: none;
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+}
+
+.black {
+  background-color: #262626;
+}
