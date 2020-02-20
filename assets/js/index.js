@@ -1,5 +1,5 @@
 $("#btn-build-mult-table").click(function() {
-  url = "/mult_table/mult_table.html?"; // base url
+  url = "/apps/mult_table.html?"; // base url
   //Gets user input
   rows = $("#mult-table-rows").val();
   columns = $("#mult-table-columns").val();
@@ -10,7 +10,7 @@ $("#btn-build-mult-table").click(function() {
 });
 
 $("#btn-build-grid").click(function() {
-  url = "/100_chart/grid.html?"; // base url
+  url = "/apps/grid.html?"; // base url
   //Gets user input
   startNumber = $("#grid-startNumber").val();
   endNumber = $("#grid-endNumber").val();
