@@ -3,132 +3,33 @@
 
 @import "main";
 
-/* Color Theme Swatches in RGBA 
-$theme-yellow: rgb(255, 230, 0);
-$theme-green: rgb(92, 221, 41);
-$theme-pink: rgba(255, 0, 141, 1);
-$theme-blue: rgba(20, 186, 204, 1);
-$theme-red: rgb(255, 116, 81);
-*/
-
-/////////////////////////////////////
 /////////////////////////////////////
 // Table Styling
 /////////////////////////////////////
-/////////////////////////////////////
+
+#table-container {
+  margin: 10px 5px;
+  padding: 0px;
+}
 
 .number {
   text-align: center;
 }
 
-/////////////////////////////////////
+.table td {
+  padding: 10px 0px;
+}
+
 /////////////////////////////////////
 // Highlight options
-/////////////////////////////////////
 /////////////////////////////////////
 
 .color-main {
-  background: $theme-green;
-}
-
-.color-prime {
-  background: $theme-red;
+  background-color: $theme-blue;
   color: white;
 }
+
 td:hover {
-  background-color: #caf9ca;
-  color: #b68dc6;
+  background: $theme-pink;
+  color: white;
 }
-
-.table td {
-  padding: 10px 0px;
-  border: solid 1px lightgrey;
-}
-
-// .title-text {
-//   font-size: 3.5em;
-//   margin-bottom: 0px;
-//   padding-bottom: 0px;
-//   line-height: 1;
-// }
-
-// .subtitle-text {
-//   font-size: 1.2em;
-//   color: dimgray;
-//   font-style: italic;
-//   padding-bottom: 0px;
-//   margin: 0px;
-// }
-
-// .table td,
-// .table th {
-//   text-align: center;
-//   font-size: 0.8em;
-//   padding: 12px 0px;
-// }
-
-// th {
-//   background-color: black;
-//   color: hotpink;
-//   font-weight: normal;
-// }
-
-// th:hover {
-//   color: black;
-//   background-color: hotpink;
-// }
-
-// td:hover {
-//   background-color: #caf9ca;
-//   color: #b68dc6;
-// }
-
-// #btn-area {
-//   margin: 10px auto;
-// }
-
-// .btn {
-//   margin: 2px;
-// }
-
-// /*
-// Highlight options
-// */
-
-// .color-main {
-//   background: lightgreen;
-// }
-
-// .color-prime {
-//   background: #fa8cfa;
-//   color: white;
-// }
-
-// /*
-// Smaller Screen Styles
-// */
-
-// @media (min-width: 768px) {
-//   /* Smaller table text */
-//   .table td,
-//   .table th {
-//     font-size: 1.8em;
-//   }
-
-//   .title-text {
-//     font-size: 4em;
-//   }
-// }
-
-// @media (min-width: 992px) {
-//   /* Smaller table text */
-//   .table td,
-//   .table th {
-//     font-size: 1.8em;
-//   }
-
-//   .title-text {
-//     font-size: 6em;
-//     margin-bottom: 5px;
-//   }
-// }
