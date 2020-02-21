@@ -127,7 +127,6 @@ function runForever() {
     $("#runForever").hide();
     $("#stop").show();
     let runChecker = setInterval(runUntilStop);
-    console.log(runChecker);
 
     $("#stop").click(function() {
       clearInterval(runChecker);

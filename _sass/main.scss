@@ -30,7 +30,16 @@ h6 {
   font-family: $hFont;
 }
 
-a {
+#main a {
+  color: $theme-pink;
+}
+
+#main a:hover {
+  color: $theme-red;
+  text-decoration: underline;
+}
+
+b {
   color: $theme-blue;
 }
 
@@ -38,20 +47,22 @@ a {
 // Header
 //////////////////////////////////
 
-#header-title {
-  color: $theme-red;
-  transition-duration: 500ms;
+header {
+  #header-title {
+    color: $theme-red;
+    transition-duration: 500ms;
 
-  h1 {
-    margin-bottom: 0px;
+    h1 {
+      margin-bottom: 0px;
+    }
   }
-}
 
-#header-subtitle {
-  color: black;
-}
+  #header-subtitle {
+    color: black;
+  }
 
-#nav-links {
-  font-family: $hFont;
-  font-size: 20px;
+  #nav-links {
+    font-family: $hFont;
+    font-size: 20px;
+  }
 }

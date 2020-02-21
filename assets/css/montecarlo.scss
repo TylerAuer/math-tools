@@ -33,17 +33,6 @@
   background-color: red;
 }
 
-#results-table-sm {
-  margin: 10px auto;
-  font-size: 20px;
-  max-width: 800px;
-}
-
-#results-table-lg {
-  margin: 10px auto;
-  font-size: 20px;
-}
-
 table,
 td,
 th {
@@ -71,6 +60,17 @@ table .table-col1 {
   max-width: 800px;
   margin: 10px auto;
   height: 400px;
+}
+
+#results-table-sm {
+  margin: 10px auto;
+  font-size: 20px;
+  max-width: 800px;
+}
+
+#results-table-lg {
+  margin: 10px auto;
+  font-size: 20px;
 }
 
 ///////////////////////////////////////////////////
