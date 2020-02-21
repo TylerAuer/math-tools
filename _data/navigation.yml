@@ -1,6 +1,6 @@
 - name: Home
   link: /
 - name: About
-  link: /about.md
+  link: /about.html
 - name: Github
   link: https://github.com/TylerAuer/math-tools
