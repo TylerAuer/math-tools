@@ -61,8 +61,13 @@ header {
     color: black;
   }
 
-  #nav-links {
+  a {
     font-family: $hFont;
     font-size: 20px;
+    color: $theme-blue;
+  }
+
+  a:hover {
+    color: $theme-pink;
   }
 }
