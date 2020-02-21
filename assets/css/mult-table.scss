@@ -3,18 +3,8 @@
 
 @import "main";
 
-/* Color Theme Swatches in RGBA 
-$theme-yellow: rgb(255, 230, 0);
-$theme-green: rgb(92, 221, 41);
-$theme-pink: rgba(255, 0, 141, 1);
-$theme-blue: rgba(20, 186, 204, 1);
-$theme-red: rgb(255, 116, 81);
-*/
-
-/////////////////////////////////////
 /////////////////////////////////////
 // Table Styling
-/////////////////////////////////////
 /////////////////////////////////////
 
 .number {
@@ -22,40 +12,38 @@ $theme-red: rgb(255, 116, 81);
 }
 
 /////////////////////////////////////
-/////////////////////////////////////
 // Highlight options
 /////////////////////////////////////
-/////////////////////////////////////
-
-.color-main {
-  background: $theme-green;
-}
-
-.color-prime {
-  background: $theme-red;
-  color: white;
-}
-
-th {
-  background-color: black;
-  color: hotpink;
-  font-weight: normal;
-}
 
 .table td,
 .table th {
   text-align: center;
   padding: 10px 0px;
+  border: none;
+}
+
+th {
+  background-color: black;
+  color: $theme-pink;
+  font-family: $hFont;
+  font-size: 20px;
+  padding: 0px;
+}
+
+// When a cell is selected
+.color-main {
+  background: $theme-blue;
+  color: white;
 }
 
 th:hover {
-  color: black;
-  background-color: hotpink;
+  color: white;
+  background-color: $theme-pink;
 }
 
 td:hover {
-  background-color: #caf9ca;
-  color: #b68dc6;
+  background-color: $theme-pink;
+  color: white;
 }
 
 .table td {
