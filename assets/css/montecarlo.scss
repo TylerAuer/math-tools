@@ -105,7 +105,7 @@ table .table-col1 {
   height: 75px;
   display: inline-block;
   margin: 0px 2px;
-  background-color: #9d2235;
+  background-color: $theme-pink;
 }
 
 .lil {
@@ -116,5 +116,5 @@ table .table-col1 {
 }
 
 .black {
-  background-color: #262626;
+  background-color: $theme-blue;
 }

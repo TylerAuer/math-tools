@@ -144,7 +144,7 @@ var myChart = new Chart(ctx, {
     labels: ["1", "2", "3", "4", "5", "6"],
     datasets: [
       {
-        data: percents,
+        data: counts,
         backgroundColor: "rgba(255, 0, 141, 1)", // $theme-pink
         borderColor: "rgba(20, 186, 204, 1)", // $theme-blue
         borderWidth: 3

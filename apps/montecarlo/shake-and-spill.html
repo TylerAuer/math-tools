@@ -1,42 +1,32 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
-<html lang="en"> 
+---
+layout: montecarlo
+title: "Shake and Spill - Monte Carlo"
+customJS: "/apps/montecarlo/shake-and-spill.js"
+customCSS: "/assets/css/montecarlo.css"
+---
 
-    <head> 
-        <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+<div class="container">
+    <div id="description">
 
-<!--         Bootstrap CSS from CDN -->
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <h2>Shake and Spill</h2>
 
-        <!--Tells the browser where to find the CSS -->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <p>
+            <b>Shake and Spill</b> is an activity from Marilyn Burns book: <a
+                href="http://store.mathsolutions.com/product-info.php?Math-By-All-Means-Probability-pid236.html">Math by
+                All
+                Means: Probability Grades 3-4</a> to teach students about probability. Students randomly "spill" 6
+            two-colored chips and track the number of each color in a set of 6.</p>
+        <p>This site runs a <b>Monte Carlo Simulation</b> of Shake and Spill. While it may take you 20 seconds for each
+            "spill", most computers can simulate thousands of "spills" in just 1 second. Scientists and mathematicians
+            use
+            this method to predict the outcome of sporting events, forecast the paths of hurricanes, and test new casino
+            games.</p>
+        <p>This method takes advantage of the <b>Law of Large Numbers</b> which says that as you rerun a random event
+            over-and-over-and-over, your results become more and more predictable.</p>
+    </div>
 
-        <!--Accesses the free google fonts--->
-        <link href="https://fonts.googleapis.com/css?family=Teko:medium,regular|Open+Sans:350" rel="stylesheet">
+    <div id="simulation" class="text-center">
 
-        <!--Link to the favicon - that little icon in the tab  -->
-        <link rel="shortcut icon" type="image/png" href="favicon.png"/>
-
-        <title>Shake and Spill</title> 
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.js"></script>
-            
-    </head>
-
-    <body>
-        <div id="description">
-            <a href="index.html"><p class="title">Shake and Spill</p></a>
-            <p class="description"><b>Shake and Spill</b> is an activity from Marilyn Burns book: <a href="http://store.mathsolutions.com/product-info.php?Math-By-All-Means-Probability-pid236.html">Math by All Means: Probability Grades 3-4</a> to teach students about probability. Students randomly "spill" 6 two-colored chips and track the number of each color in a set of 6.</p><p>This site runs a <b>Monte Carlo Simulation</b> of Shake and Spill. While it may take you 20 seconds for each "spill", most computers can simulate thousands of "spills" in just 1 second. Scientists and mathematicians use this method to predict the outcome of sporting events, forecast the paths of hurricanes, and test new casino games.</p><p>This method takes advantage of the <b>Law of Large Numbers</b> which says that as you rerun a random event over-and-over-and-over, your results become more and more predictable.</p>
-        </div>
-        
-        <div id="buttons">
-            <button id="run1">1 Spill</button>
-            <button id="run10">10 Spills</button>
-<!--            <button id="run100">100 </button>-->
-<!--            <button id="run1000">Run 1000</button>-->
-            <button id="runForever">Infinite Spills</button>
-            <button id="reset">Reset</button>
-        </div>
-    
         <div id="lastResult">
             <div class="roundedBox">
                 <div id="circle1" class="big black"></div>
@@ -47,9 +37,14 @@
                 <div id="circle6" class="big"></div>
             </div>
         </div>
-        
-        <div id="results-table">
-            <table>
+
+        <!-- iteration counter -->
+        <h2 id="iterCount" class="text-center">Iteration Count: 0</h2>
+
+        {% include montecarlo-btns.html %}
+
+        <div id="results-table-sm">
+            <table class='table table-sm'>
                 <tr>
                     <th>Result</th>
                     <th>Count</th>
@@ -65,7 +60,7 @@
                         <div class="lil"></div>
                     </td>
                     <td id="count1">210</td>
-                    <td id="percent1">70%</td>             
+                    <td id="percent1">70%</td>
                 </tr>
                 <tr>
                     <td>
@@ -141,21 +136,10 @@
                 </tr>
             </table>
         </div>
-            
-        <p id="iterCount">If you are reading this, it means your browser does not support JavaScript -- the programming language that makes this page work. I suggest using <a href="https://www.google.com/chrome/browser/desktop/">Google Chrome</a> instead!</p>
-        
-<!--        Graph stuff-->
-        <canvas id="myChart"></canvas>
-        
-        
-        
-         <!--This div holds the footer 	-->
-        <p class='endmatter'>This page was created by <a href='mailto:&#84;&#121;&#108;&#101;&#114;&#64;&#109;&#97;&#116;&#104;&#102;&#105;&#114;&#101;&#119;&#111;&#114;&#107;&#115;&#46;&#99;&#111;&#109;'>Tyler Auer</a> of <a href='http://mathfireworks.com'>Math Fireworks</a>. It may be used freely for any educational purposes. When possible, please let Tyler know you are using this page. It encourages him to make more! <br><br>Discover more Monte Carlo simulations at <a href="index.html">montecarlo.mathfireworks.com</a>. <br><br>Chart powered by <a href="http://www.chartjs.org/">Chart.js</a> JavaScript library.
 
-<!--    Gets JQuery from Google CDN   -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    
-        <script src="shake_and_spill.js"></script>
-        
-        
-    </body>
-</html>
+
+        <!--        Graph stuff-->
+        <canvas id="myChart"></canvas>
+
+    </div>
+</div>
