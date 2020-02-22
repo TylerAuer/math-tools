@@ -28,13 +28,39 @@ h4,
 h5,
 h6 {
   font-family: $hFont;
+  transition-duration: 1000ms;
+  color: black;
 }
 
-#main a {
+h1 {
   color: $theme-pink;
 }
 
-#main a:hover {
+h2 {
+  color: $theme-blue;
+}
+
+h3 {
+  color: $theme-red;
+}
+
+h4 {
+  color: $theme-yellow;
+}
+
+h5 {
+  color: $theme-green;
+}
+
+h6 {
+  color: $theme-pink;
+}
+
+#main a:not(.btn) {
+  color: $theme-pink;
+}
+
+#main a:hover:not(.btn) {
   color: $theme-red;
   text-decoration: underline;
 }
@@ -48,17 +74,8 @@ b {
 //////////////////////////////////
 
 header {
-  #header-title {
-    color: $theme-red;
-    transition-duration: 500ms;
-
-    h1 {
-      margin-bottom: 0px;
-    }
-  }
-
-  #header-subtitle {
-    color: black;
+  h1 {
+    margin-bottom: 0px;
   }
 
   a {
@@ -69,5 +86,9 @@ header {
 
   a:hover {
     color: $theme-pink;
+  }
+
+  .title-letter {
+    transition-duration: 1000ms;
   }
 }
