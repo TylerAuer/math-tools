@@ -7,6 +7,8 @@ const titleSpans = titleText.map(
 );
 titleElement.innerHTML = titleSpans.join("");
 
+const titleCharSpans = document.querySelectorAll(".title-letter");
+
 /**
  * Selects a random color from the site's theme colors
  * Returns an rgb or rgba string
@@ -35,8 +37,7 @@ function colorCycle(element, isFirstTime) {
   const waitDuration = Math.ceil(Math.random() * 6000);
   setTimeout(colorCycle, waitDuration, element, false);
 }
-const hTitles = document.querySelectorAll(".title-letter, h2, h3, h4, h5, h6");
 
-hTitles.forEach(element => {
+titleCharSpans.forEach(element => {
   colorCycle(element, true);
 });

@@ -37,23 +37,23 @@ h1 {
 }
 
 h2 {
-  color: $theme-blue;
+  color: $theme-pink;
 }
 
 h3 {
-  color: $theme-red;
+  color: $theme-blue;
 }
 
 h4 {
-  color: $theme-yellow;
-}
-
-h5 {
   color: $theme-green;
 }
 
+h5 {
+  color: $theme-red;
+}
+
 h6 {
-  color: $theme-pink;
+  color: $theme-yellow;
 }
 
 #main a:not(.btn) {
