@@ -18,16 +18,21 @@ I recently (2/20/20) finished combining a few projects and migrating the whole s
 ## Future Things to Build
 
 - 100s grid puzzles
-  - Blank squares to fill based on a give
+  - Blank squares to fill based on a given number of columns
   - Sums of squares in a pattern
 - Monte Carlo
-  - Sum of 3 Dice
   - Poker Hands
   - Blackjack
   - Roulette
+  - Flipping a Coin
 - Big Ideas
+  - Base(Radix) Conversions
   - Broken Calculators
   - Random subitizing card generator
   - Ciphers and Codes
   - Visual Collatz Conjecture
   - XKCD Fruit Rating
+  - Game of Life
+  - RegEx Puzzles
+  - Half Life Simulator
+  - Game of Life (Conway)
