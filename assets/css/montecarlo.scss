@@ -57,9 +57,7 @@ table .table-col1 {
 
 #myChart {
   width: 100%;
-  max-width: 800px;
   margin: 10px auto;
-  height: 400px;
 }
 
 #results-table-sm {
@@ -70,7 +68,12 @@ table .table-col1 {
 
 #results-table-lg {
   margin: 10px auto;
-  font-size: 20px;
+  font-size: 16px;
+
+  .table-col1,
+  th {
+    font-size: 20px;
+  }
 }
 
 ///////////////////////////////////////////////////

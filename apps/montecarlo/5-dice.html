@@ -1,0 +1,48 @@
+---
+layout: montecarlo
+title: "Sum of 5 Dice - Monte Carlo"
+customJS: "/apps/montecarlo/js/n-dice.js"
+customCSS: "/assets/css/montecarlo.css"
+---
+<script>
+    const diceCount = 5;
+</script>
+
+<div class="container">
+    <div id="description">
+        <h2>Sum of 5 Dice</h2>
+        <p>
+            Rolling a pair of dice is a common activity used to introduce students to probability. But, what if we went
+            <b><i>CrAzY</i></b> and used 5 dice instead. What do you predict will happen?
+        </p>
+        <p>
+            This site runs a <b>Monte Carlo Simulation</b> of rolling 5 dice. While it may take you 10 seconds
+            for
+            each roll, most computers can simulate thousands of rolls every second. Scientists and mathematicians use
+            this
+            method to predict the outcome of sporting events</a>, forecast the paths of hurricanes, and test new casino
+            games.
+        </p>
+        <p>This method takes advantage of the <b>Law of Large Numbers</b> which says that as you rerun a random event
+            over-and-over-and-over, your results become more and more predictable.</p>
+    </div>
+</div>
+<div class="container-fluid">
+    <div id="simulation">
+
+        <div id="lastResult" class="text-center">
+        </div>
+
+        <!-- iteration counter -->
+        <h2 id="iterCount" class="text-center">Iteration Count: 0</h2>
+
+        {% include montecarlo-btns.html %}
+
+        <div id="results-table-lg">
+            <table id="results-table" class='table table-sm'>
+            </table>
+        </div>
+
+        <!--        Graph stuff-->
+        <canvas id="myChart"></canvas>
+    </div>
