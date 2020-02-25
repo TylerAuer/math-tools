@@ -1,0 +1,21 @@
+---
+---
+
+@import "main";
+
+.atom {
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  margin: 2px;
+  float: left;
+  transition-duration: 2000ms;
+}
+
+.atom-alive {
+  background-color: rgba(255, 0, 141, 1); // $theme-pink
+}
+
+.atom.atom-dead {
+  background-color: rgba(255, 0, 141, 0); // $theme-pink
+}
