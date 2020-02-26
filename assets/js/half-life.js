@@ -1,21 +1,34 @@
 // TODO: Add counter for generations
-// TODO: Get atomsLeft to work
 // TODO: Stop process once all atoms are eliminated
 
 const config = {
   startingAtomCount: 10000,
+  //TODO: define getter setter for starting atom count to update description paragraph
   halfLifeInMs: 5000,
-  msBetweenDecayEvents: 100
+  msBetweenDecayEvents: 250
 };
 config.decayEventProbability = Math.pow(
   0.5,
-  1 / (config.halfLifeInMs / config.msBetweenDecayEvents)
+  1 / (config.halfLifeInMs / config.msBetweenDecayEvents) // nth root where n the number of decay events / half life
 );
 
 const simController = {
   decayEventCount: 0,
-  halfLifeCount: 0
+  halfLifeCount: 0,
+  timeElapsed: 0,
+  atomsLeft: config.startingAtomCount,
+  updateHeadings: function() {
+    const hlCounter = document.getElementById("hlCounter");
+    const secElapsed = document.getElementById("secElapsed");
+    const atomsLeft = document.getElementById("atomsCounter");
+    hlCounter.innerHTML = this.halfLifeCount;
+    secElapsed.innerHTML = this.timeElapsed;
+    atomsLeft.innerHTML = this.atomsLeft;
+  }
 };
+
+const dotsOnPageText = document.getElementById("dots-on-page");
+dotsOnPageText.innerHTML = config.startingAtomCount;
 
 const atomDiv = document.getElementById("atom-holder");
 // TODO: Need to set an upper bound for halfLifeMs
@@ -33,7 +46,7 @@ function decayEvent() {
   simController.decayEventCount += 1;
   if (
     simController.decayEventCount %
-      (config.halfLifeInMs / config.halfLifeInMs) ===
+      (config.halfLifeInMs / config.msBetweenDecayEvents) ===
     0
   ) {
     simController.halfLifeCount += 1;
@@ -43,7 +56,8 @@ function decayEvent() {
     if (Math.random() > config.decayEventProbability) {
       elem.classList = "atom atom-dead";
       elem.style = "background-color: white;";
-      atomsLeft -= 1;
+      simController.atomsLeft -= 1;
     }
   });
+  simController.updateHeadings();
 }
