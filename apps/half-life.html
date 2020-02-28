@@ -9,7 +9,8 @@ customCSS: "/assets/css/half-life.css"
         Half-Life & Radioactive Decay
     </h2>
     <p>
-        There are <span id="dots-on-page">5000</span> dots on this page. When you hit the start button, they will begin
+        There are <b><span id="dots-on-page">5000</span></b> dots on this page. When you hit the start button, they will
+        begin
         to turn white, randomly. This
         is meant to simulate a phenomenon known as <a href="https://en.wikipedia.org/wiki/Radioactive_decay">radioactive
             decay</a>.
@@ -26,11 +27,10 @@ customCSS: "/assets/css/half-life.css"
     </p>
 </div>
 
-<div id="user-settings" class="container text-center">
 
-</div>
 
-<div class="container-fluid">
+<div class="container">
+
     <div id="control-btns" class="d-flex flex-wrap justify-content-center">
         <button id="start-btn" type="button" class="btn btn-secondary btn-lg m-2">Start</button>
         <button id="stop-btn" type="button" class="btn btn-secondary btn-lg m-2">Stop</button>
@@ -40,6 +40,16 @@ customCSS: "/assets/css/half-life.css"
 
 <div id="controls" class="container text-center">
     <div class="row">
+        <form class="col">
+            <div class="form-group">
+                <label for="formControlRange">
+                    <h3 id="hl-length">5 sec.</h3>
+                    <h5>Half-life Length</h5>
+                    <input id="user-input-hl" type="range" class="form-control-range" min="0.25" max="300" step="0.25"
+                        value="5">
+                </label>
+            </div>
+        </form>
         <div class="col">
             <h3 id="hlCounter">0</h3>
             <h5>Half-lives Elapsed</h5>

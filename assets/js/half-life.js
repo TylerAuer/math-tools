@@ -1,11 +1,37 @@
-// TODO: Add fields for customizing the half-life
 // TODO: Add a geiger counter sound
+
+const userHL = document.getElementById("user-input-hl");
+userHL.oninput = function() {
+  const hlDisplay = document.getElementById("hl-length");
+
+  function formatHlVal() {
+    const rawTimeInSec = userHL.value;
+    if (rawTimeInSec < 60) {
+      return rawTimeInSec + " sec.";
+    } else {
+      const mins = Math.floor(rawTimeInSec / 60);
+      let secs = Math.round(rawTimeInSec % 60).toString();
+      if (secs.length === 1) {
+        secs = "0" + secs;
+      }
+      return mins + ":" + secs;
+    }
+  }
+
+  hlDisplay.innerText = formatHlVal();
+  sim.config.halfLifeInMs = userHL.value * 1000;
+  sim.config.decayEventProbability = Math.pow(
+    0.5,
+    1 / (sim.config.halfLifeInMs / sim.config.msBetweenDecayEvents) // nth root where n the number of decay events / half life
+  );
+};
+
 const sim = {
   config: {
     // these do NOT change when the simulation runs
-    startingAtomCount: 10000,
+    startingAtomCount: 5000,
     halfLifeInMs: 5000,
-    msBetweenDecayEvents: 100,
+    msBetweenDecayEvents: 250,
     // these update as the simulation runs
     decayEventCount: 0,
     halfLifeCount: 0,
@@ -81,7 +107,9 @@ stopBtn.addEventListener("click", () => sim.stop());
 resetBtn.addEventListener("click", () => sim.reset());
 
 function decayEvent() {
-  // BUG: Only works when half-life is a multiple msBetweenDecayEvent
+  console.log(sim.config.halfLifeInMs);
+
+  // Only works when half-life is a multiple msBetweenDecayEvent
   sim.config.decayEventCount += 1;
   if (
     sim.config.decayEventCount %
