@@ -9,11 +9,18 @@ customCSS: "/assets/css/half-life.css"
         Half-Life & Radioactive Decay
     </h2>
     <p>
-        There are <b><span id="dots-on-page">5000</span></b> dots on this page. When you hit the start button, they will
-        begin
-        to turn white, randomly. This
+        There are <b><span id="dots-on-page">5000</span></b> atoms (pink dots) on this page. When you hit the start
+        button, they will begin to turn white, randomly. This
         is meant to simulate a phenomenon known as <a href="https://en.wikipedia.org/wiki/Radioactive_decay">radioactive
             decay</a>.
+    </p>
+    <p>
+        It is impossible to predict how long it will take an individual atom to decay in the same way that it is
+        impossible to know
+        for sure if a coin will land on heads or tails. But, since there are <b>so</b> many atoms, we can make
+        predictions about what the pattern will look like. The amount of atoms that remain radioactive follows an
+        <a href="https://www.desmos.com/calculator/y4kpct1jkq">exponential curve</a>. You often learn about exponential
+        equations in an Algebra 1 course.
     </p>
     <p>
         The <b>rate of decay</b> of a material is described with something called <b>half-life</b>. The half-life of a
@@ -38,25 +45,28 @@ customCSS: "/assets/css/half-life.css"
     </div>
 </div>
 
+<!-- TODO: Tweak stylings to be better, especially on small screens -->
 <div id="controls" class="container text-center">
     <div class="row">
-        <form class="col">
-            <div class="form-group">
-                <label for="formControlRange">
-                    <h3 id="hl-length">5 sec.</h3>
-                    <h5>Half-life Length</h5>
-                    <input id="user-input-hl" type="range" class="form-control-range" min="0.25" max="300" step="0.25"
-                        value="5">
-                </label>
-            </div>
-        </form>
+        <div class="col">
+            <form>
+                <div class="form-group">
+                    <label for="user-input-hl">
+                        <h3 id="hl-length">5 sec.</h3>
+                        <h5>Half-life Length</h5>
+                        <input id="user-input-hl" type="range" class="form-control-range" min="0.25" max="300"
+                            step="0.25" value="5">
+                    </label>
+                </div>
+            </form>
+        </div>
         <div class="col">
             <h3 id="hlCounter">0</h3>
             <h5>Half-lives Elapsed</h5>
         </div>
         <div class="col">
             <h3 id="secElapsed">0.0</h3>
-            <h5>Seconds Elapsed</h5>
+            <h5>Time Elapsed</h5>
         </div>
         <div class="col">
             <h3 id="atomsCounter">10000</h3>
