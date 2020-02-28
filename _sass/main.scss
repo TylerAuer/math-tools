@@ -72,8 +72,15 @@ b {
 //////////////////////////////////
 // Header
 //////////////////////////////////
+//480
 
 header {
+  @media screen and (max-width: 480px) {
+    #header-title {
+      font-size: 35px;
+    }
+  }
+
   h1 {
     margin-bottom: 0px;
   }
