@@ -5,142 +5,134 @@ customJS: "/assets/js/index.js"
 customCSS: "/assets/css/index.css"
 ---
 <div class="container">
-
-  <!--
-  #########################
-  100s Grid 
-  #########################
--->
-  <div class="card-deck">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title text-center">100s Chart</h2>
-        <p class="card-text">
-          Explore place value, skip counting and factors with this customizable 100s chart.
-        </p>
-      </div>
-
-      <ul class="list-group list-group-flush">
-
-        <li class="list-group-item">
-          <h3>Try it out:</h3>
-          <a class="btn btn-dark" href="/apps/grid.html">Simple is as simple does</a>
-        </li>
-
-        <li class="list-group-item">
-
-          <h3>Get Fancy:</h3>
-
-          <div id="grid-build-options" class="input-group input-group-sm mb-2">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="">Start Number</span>
-            </div>
-            <input id="grid-startNumber" type="number" min="1" max="1000" class="form-control" value="1">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="">End Number</span>
-            </div>
-            <input id="grid-endNumber" type="number" min="1" max="2000" class="form-control" value="100">
-          </div>
-
-          <div id="grid-build-options" class="input-group input-group-sm mb-2">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="">Columns</span>
-            </div>
-            <input id="grid-columns" type="number" min="1" max="15" class="form-control" value="10">
-          </div>
-
-          <button id="btn-build-grid" class="btn btn-dark">Where we're going we don't need roads</button>
-        </li>
-
-      </ul>
-    </div>
-
+  <div class="row">
+    <!-- BUG: Cards should be 100% width sooner. It seems like the nesting of cards is off here. -->
     <!--
-  #########################
-  Multiplication Table
-  #########################
--->
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title text-center">Multiplication Table</h2>
-        <p class="card-text">
-          Find new patterns in this customizable "times table."
-        </p>
-      </div>
-
-      <ul class="list-group list-group-flush">
-
-        <li class="list-group-item">
-          <h3>Try it out:</h3>
-          <a class="btn btn-dark" href="/apps/mult_table.html">Ya' basic</a>
-        </li>
-
-        <li class="list-group-item">
-
-          <h3>Get Fancy:</h3>
-
-          <div id="mult-table-options" class="input-group input-group-sm mb-2">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="">Columns</span>
+        #########################
+        100s Grid 
+        #########################
+        -->
+    <div class="col-md-6">
+      <div class="card m-1">
+        <div class="card-body">
+          <h2 class="card-title text-center">100s Chart</h2>
+          <p class="card-text">
+            Explore place value, skip counting and factors with this customizable 100s chart.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <h3>Try it out:</h3>
+            <a class="btn btn-dark btn-block" href="/apps/grid.html">Simple is as simple does</a>
+          </li>
+          <li class="list-group-item">
+            <h3>Get Fancy:</h3>
+            <div id="grid-build-options" class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">Start Number</span>
+              </div>
+              <input id="grid-startNumber" type="number" min="1" max="1000" class="form-control" value="1">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">End Number</span>
+              </div>
+              <input id="grid-endNumber" type="number" min="1" max="2000" class="form-control" value="100">
             </div>
-            <input id="mult-table-columns" type="number" min="1" max="15" class="form-control" value="10">
-          </div>
-
-          <div id="mult-table-options" class="input-group input-group-sm mb-2">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="">Rows</span>
+            <div id="grid-build-options" class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">Columns</span>
+              </div>
+              <input id="grid-columns" type="number" min="1" max="15" class="form-control" value="10">
             </div>
-            <input id="mult-table-rows" type="number" min="1" max="200" class="form-control" value="10">
-          </div>
-
-          <button id="btn-build-mult-table" class="btn btn-dark">Life finds a way</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
-  <!--
-  #######################  
-    Monte Carlo Simulations
-  #######################
-  -->
-  <div class="card-deck">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title text-center">Monte Carlo</h2>
-        <p class="card-text">
-          Run random events over and over and over and over and over and over and over and over and over and over and
-          over and over and over and over and over and over and over and over...
-        </p>
-        <h3>Start with a favorite:</h3>
-        <ul>
-          <li><a href="/apps/montecarlo/one-die.html">One die</a></li>
-          <li><a href="/apps/montecarlo/2-dice.html">Sum of 2 dice</a></li>
+            <button id="btn-build-grid" class="btn btn-dark btn-block">Where we're going we don't need
+              roads</button>
+          </li>
         </ul>
-        <h3>Check out the collection:</h3>
-        <a class="btn btn-dark" href="/apps/montecarlo/montecarlo.html" role="link">The whole enchilada</a>
       </div>
     </div>
 
-
     <!--
+      #########################
+      Multiplication Table
+      #########################
+      -->
+    <div class="col-md-6">
+      <div class="card m-1">
+        <div class="card-body">
+          <h2 class="card-title text-center">Multiplication Table</h2>
+          <p class="card-text">
+            Find new patterns in this customizable "times table."
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <h3>Try it out:</h3>
+            <a class="btn btn-dark btn-block" href="/apps/mult_table.html">Ya' basic</a>
+          </li>
+          <li class="list-group-item">
+            <h3>Get Fancy:</h3>
+            <div id="mult-table-options" class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">Columns</span>
+              </div>
+              <input id="mult-table-columns" type="number" min="1" max="15" class="form-control" value="10">
+            </div>
+            <div id="mult-table-options" class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="">Rows</span>
+              </div>
+              <input id="mult-table-rows" type="number" min="1" max="200" class="form-control" value="10">
+            </div>
+            <button id="btn-build-mult-table" class="btn btn-dark btn-block">Life finds a way</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+
+  <!--
   #######################  
     Monte Carlo Simulations
   #######################
   -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card m-1">
+        <div class="card-body">
+          <h2 class="card-title text-center">Monte Carlo</h2>
+          <p class="card-text">
+            Run random events over and over and over and over...
+          </p>
+          <h3>Favorite:</h3>
+          <ul>
+            <li><a href="/apps/montecarlo/one-die.html">One die</a></li>
+            <li><a href="/apps/montecarlo/2-dice.html">Sum of 2 dice</a></li>
+          </ul>
+          <h3>Check out the collection:</h3>
+          <a class="btn btn-dark btn-block" href="/apps/montecarlo/montecarlo.html" role="link">The whole enchilada</a>
+        </div>
+      </div>
+    </div>
 
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title text-center">Half-life</h2>
-        <p class="card-text">
-          Explore how probability drives the decay of radioactive materials. Learn how rates of decay are measured using
-          half-life.
-        </p>
-        <h3>Try it out:</h3>
-        <a class="btn btn-dark" href="/apps/half-life.html" role="link">The files are in the computer!?</a>
+    <!--
+  #######################  
+    Half Life Simulations
+  #######################
+  -->
+
+    <div class="col-md-6">
+      <div class="card m-1">
+        <div class="card-body">
+          <h2 class="card-title text-center">Half-life</h2>
+          <p class="card-text">
+            Explore how probability drives the decay of radioactive materials. Learn how rates of decay are measured
+            using
+            half-life.
+          </p>
+          <h3>Try it out:</h3>
+          <a class="btn btn-dark btn-block" href="/apps/half-life.html" role="link">The files are in the computer!?</a>
+        </div>
       </div>
     </div>
   </div>
-
 </div>
